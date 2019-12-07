@@ -42,3 +42,8 @@ Things you may want to cover:
 |------|----|-------|
 |group_name|string|null: false|
 |member|string|index: true|
+
+### Association
+-has_many :users, through: groups_users
+-has_many :messages
+
