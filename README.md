@@ -33,3 +33,12 @@ Things you may want to cover:
 ### Association
 - has_many :groups, through: :groups_users
 - has_many :messages
+
+
+
+## group テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|group_name|string|null: false|
+|member|string|index: true|
