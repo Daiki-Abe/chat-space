@@ -15,11 +15,34 @@ html,body {
   background-color: #253141;
   width: 300px;
   height: 100%;
+
+  .side-bar__user-name {
+    height: 100px;
+    }
+
+  .side-bar__group-list {
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    }
   }
 
   .main-chat {
     background-color: #ffffff;
     width: calc(100vw - 300px);
+
+  .main-chat__group-name {
+    height: 100px;
     }
+
+  .main-chat__user-message {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    }
+
+  .main-chat__message-form {
+    height: 90px;
+    background-color: #d2d2d2;
+    }
+  }
   }
 }
