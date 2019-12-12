@@ -2,7 +2,11 @@
   .side-bar__user-name
     .user-name__item 
       .user-name__box 
+        masa
       .user-name__icons
+        =link_to "#", class: "user-name__btn user-name__btn--edit" do
+          = icon('fa fa-edit', class: "user-name__btn--icon")
+          %span<>
         =link_to "#", class: "user-name__btn user-name__btn--cog" do
           = icon('fas fa-cog', class: "user-name__btn--icon")
           %span<>
