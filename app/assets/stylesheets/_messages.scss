@@ -147,9 +147,46 @@ html,body {
         }
       }
 
-    .main-chat__message-form {
+    .form {
       height: 90px;
       background-color: #d2d2d2;
+      padding: 20px 40px;
+
+        .form__area {
+          display: flex;
+
+          .send__message {
+            position: relative;
+            width: 100%;
+            
+            &__text {
+              height: 50px;
+              width: 100%;
+              padding: 0 40px 0 10px;
+              border-style: none;
+            }
+
+            &__image {
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              font-size: 25px;
+
+                .message__image {
+                  display: none;
+                }
+            }
+          }
+
+          .form__submit {
+            height: 50px;
+            width: 100px;
+            margin-left: 15px;
+            padding: 0 30px;
+            background-color: #59aae0;
+            color: white;
+          }
+        }
       }
     }
   }
