@@ -1,11 +1,31 @@
+!!!
 .main-chat
   .main-chat__group-overview
     .group-overview__box
-      .group-overview__group-name
+      .group-overview__box__group-name
         test
-      .group-overview__group-message
+      .group-overview__box__group-member
         Member:masa
     .group-overview__edit-box
       = link_to "Edit", "#", class: "group-overview__edit-btn"
+
   .main-chat__user-message
+    .user-message__name-box
+      .user-message__name-box__talker
+        masa
+      .user-message__name-box__day-time
+        - time = Time.now
+        = time.strftime("%Y/%-m/%-d/(%a) %-H時%-M分%-S秒")
+    .user-message__message-box
+      おはよう！
+
+    .user-message__name-box
+      .user-message__name-box__talker
+        masa
+      .user-message__name-box__day-time
+        - time = Time.now
+        = time.strftime("%Y/%-m/%-d/(%a) %-H時%-M分%-S秒")
+    .user-message__message-box
+      おはよう！
+      
   .main-chat__message-form

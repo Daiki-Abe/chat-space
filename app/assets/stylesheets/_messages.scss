@@ -89,13 +89,13 @@ html,body {
         padding-left: 40px;
         height: 96px;
 
-        .group-overview__group-name {
+        &__group-name {
           margin: 35px 0 15px 0;
           font-size: 20px;
           color: #333333;
           }
 
-        .group-overview__group-message {
+        &__group-member {
           font-size: 12px;
           color: #999999;
           }
@@ -119,6 +119,32 @@ html,body {
     .main-chat__user-message {
       height: calc(100vh - 190px);
       background-color: #fafafa;
+      padding-left: 40px;
+      padding-top: 35px;
+
+        .user-message__name-box {
+        display: flex;
+        margin-bottom: 12px;
+
+          &__talker {
+            color: #333333;
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+          }
+
+          &__day-time {
+            color: #999999;
+            font-size: 12px;
+            line-height: 10px;
+          }
+        }
+
+        .user-message__message-box {
+          color: #434A54;
+          font-size: 14px;
+          padding-bottom: 46px;
+        }
       }
 
     .main-chat__message-form {
