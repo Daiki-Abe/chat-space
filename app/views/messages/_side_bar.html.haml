@@ -2,9 +2,9 @@
 .side-bar
   .side-bar__user-name
     .user-name__item 
-      .user-name__box 
+      .user-name__item__box 
         masa
-      .user-name__icons
+      .user-name__item__icons
         =link_to "#", class: "user-name__btn user-name__btn--edit" do
           = icon('fa fa-edit', class: "user-name__btn--icon")
           %span<>
@@ -13,13 +13,13 @@
           %span<>
   .side-bar__group-list
     .side-bar__group-box
-      .side-bar__group-name
+      .side-bar__group-box__name
         techcamp
-      .side-bar__group-message
+      .side-bar__group-box__message
         まだメッセージはありません
 
     .side-bar__group-box
-      .side-bar__group-name
+      .side-bar__group-box__name
         techcamp
-      .side-bar__group-message
+      .side-bar__group-box__message
         まだメッセージはありません

@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+$mainWhiteColor: #ffffff;
+
+$mainBlackColor: #333333;
+
+$mainGrayColor: #999999;
+
+$mainBlueColor: #58beee;
+
 html,body {
   height: 100%;
   margin: 0;
@@ -30,27 +38,27 @@ html,body {
         display: flex;
         justify-content: space-between;
 
-          .user-name__box {
-            width: 200px;
-            display: flex;
-            align-items: center;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: bold;
-          }
+        &__box {
+          width: 200px;
+          display: flex;
+          align-items: center;
+          color: $mainWhiteColor;
+          font-size: 16px;
+          font-weight: bold;
+        }
 
-          .user-name__icons {
-            width: 60px;
-            text-align: right;
+        &__icons {
+          width: 60px;
+          text-align: right;
 
-            .user-name__btn {
-              color: #ffffff;
+          .user-name__btn {
+             color: $mainWhiteColor;
 
-              &--cog {
-                margin-left: 5px;
-              }
+            &--cog {
+              margin-left: 5px;
             }
           }
+        }
       }
     }
 
@@ -60,15 +68,15 @@ html,body {
 
       .side-bar__group-box {
         height: 95px;
-        color: #ffffff;
+        color: $mainWhiteColor;
         font-weight: bold;
 
-        .side-bar__group-name {
+        &__name {
           padding: 20px 20px 5px 20px;
           font-size: 15px;
         }
 
-        .side-bar__group-message {
+        &__message {
           padding: 0px 20px 40px 20px;
           font-size: 11px;
         }
@@ -77,7 +85,7 @@ html,body {
   }
 
   .main-chat {
-    background-color: #ffffff;
+    background-color: $mainWhiteColor;
     width: calc(100vw - 300px);
 
     .main-chat__group-overview {
@@ -92,24 +100,24 @@ html,body {
         &__group-name {
           margin: 35px 0 15px 0;
           font-size: 20px;
-          color: #333333;
+          color: $mainBlackColor;
           }
 
         &__group-member {
           font-size: 12px;
-          color: #999999;
+          color: $mainGrayColor;
           }
         }
 
       .group-overview__edit-box {
           margin: 28px 40px 28px 0;
 
-          .group-overview__edit-btn {
+          &__btn {
             text-decoration: none;
             text-align: center;
             display: block;
-            border: 0.5px solid #7cb0f3;
-            color: #7cb0f3;
+            border: 0.5px solid $mainBlueColor;
+            color: $mainBlueColor;
             height: 40px;
             padding: 10px 20px;
           }
@@ -127,14 +135,14 @@ html,body {
         margin-bottom: 12px;
 
           &__talker {
-            color: #333333;
+            color: $mainBlackColor;
             font-size: 16px;
             font-weight: bold;
             margin-right: 10px;
           }
 
           &__day-time {
-            color: #999999;
+            color: $mainGrayColor;
             font-size: 12px;
             line-height: 10px;
           }
@@ -172,9 +180,9 @@ html,body {
               right: 10px;
               font-size: 25px;
 
-                .message__image {
-                  display: none;
-                }
+              .message__image {
+                display: none;
+              }
             }
           }
 
@@ -183,8 +191,8 @@ html,body {
             width: 100px;
             margin-left: 15px;
             padding: 0 30px;
-            background-color: #59aae0;
-            color: white;
+            background-color: $mainBlueColor;
+            color: $mainWhiteColor;
           }
         }
       }
