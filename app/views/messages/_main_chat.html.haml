@@ -10,22 +10,22 @@
       = link_to "Edit", "#", class: "group-overview__edit-box__btn"
 
   .main-chat__user-message
-    .user-message__name-box
-      .user-message__name-box__talker
+    .user-message__name
+      .user-message__name__talker
         masa
-      .user-message__name-box__day-time
+      .user-message__name__day-time
         - time = Time.now
         = time.strftime("%Y/%-m/%-d/(%a) %-H時%-M分%-S秒")
-    .user-message__message-box
+    .user-message__message
       おはよう！
 
-    .user-message__name-box
-      .user-message__name-box__talker
+    .user-message__name
+      .user-message__name__talker
         masa
-      .user-message__name-box__day-time
+      .user-message__name__day-time
         - time = Time.now
         = time.strftime("%Y/%-m/%-d/(%a) %-H時%-M分%-S秒")
-    .user-message__message-box
+    .user-message__message
       おはよう！
 
   .form
@@ -34,5 +34,5 @@
         %input(type="text" placeholder="type a message" class="send__message__text")
         %label{class: "send__message__image", for: "image__box"}
           = icon('fas', 'image')
-          %input(type="file" class="message__image" id="image__box")
+          %input(type="file" class="send__message__image_file" id="image__box")
       %input(type="submit" value="Send" class="form__submit")

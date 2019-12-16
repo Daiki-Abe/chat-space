@@ -10,6 +10,11 @@ $mainGrayColor: #999999;
 
 $mainBlueColor: #58beee;
 
+@mixin size($height, $width) {
+  height: $height;
+  width: $width;
+}
+
 html,body {
   height: 100%;
   margin: 0;
@@ -20,8 +25,7 @@ html,body {
     height: 100%;
 
   .side-bar {
-    width: 300px;
-    height: 100%;
+    @include size(100%, 300px);
 
     .side-bar__user-name {
       background-color: #253141;
@@ -31,14 +35,13 @@ html,body {
       align-items: center;
 
       .user-name__item {
-        height: 20px;
-        width: 260px;
+        @include size(20px, 260px);
         position: absolute;
         margin: 0 20px;
         display: flex;
         justify-content: space-between;
 
-        &__box {
+        &__name {
           width: 200px;
           display: flex;
           align-items: center;
@@ -66,7 +69,7 @@ html,body {
       background-color: #2f3e51;
       height: calc(100vh - 100px);
 
-      .side-bar__group-box {
+      .group-list__box {
         height: 95px;
         color: $mainWhiteColor;
         font-weight: bold;
@@ -88,7 +91,7 @@ html,body {
     background-color: $mainWhiteColor;
     width: calc(100vw - 300px);
 
-    .main-chat__group-overview {
+    &__group-overview {
       height: 100px;
       display: flex;
       justify-content: space-between;
@@ -124,13 +127,13 @@ html,body {
         }
       }
 
-    .main-chat__user-message {
+    &__user-message {
       height: calc(100vh - 190px);
       background-color: #fafafa;
       padding-left: 40px;
       padding-top: 35px;
 
-        .user-message__name-box {
+        .user-message__name {
         display: flex;
         margin-bottom: 12px;
 
@@ -148,7 +151,7 @@ html,body {
           }
         }
 
-        .user-message__message-box {
+        .user-message__message {
           color: #434A54;
           font-size: 14px;
           padding-bottom: 46px;
@@ -160,7 +163,7 @@ html,body {
       background-color: #d2d2d2;
       padding: 20px 40px;
 
-        .form__area {
+        &__area {
           display: flex;
 
           .send__message {
@@ -168,8 +171,7 @@ html,body {
             width: 100%;
             
             &__text {
-              height: 50px;
-              width: 100%;
+              @include size(50px, 100%);
               padding: 0 40px 0 10px;
               border-style: none;
             }
@@ -180,15 +182,14 @@ html,body {
               right: 10px;
               font-size: 25px;
 
-              .message__image {
+              &_file {
                 display: none;
               }
             }
           }
 
           .form__submit {
-            height: 50px;
-            width: 100px;
+            @include size(50px, 100px);
             margin-left: 15px;
             padding: 0 30px;
             background-color: $mainBlueColor;
