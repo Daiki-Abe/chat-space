@@ -2,12 +2,12 @@
   .side-bar__user-name
     .user-name__item 
       .user-name__item__name 
-        masa
+        = current_user.name
       .user-name__item__icons
-        =link_to "#", class: "user-name__btn user-name__btn--edit" do
+        = link_to "#", class: "user-name__btn user-name__btn--edit" do
           = icon('fa fa-edit', class: "user-name__btn--icon")
           %span<>
-        =link_to "#", class: "user-name__btn user-name__btn--cog" do
+        = link_to "edit_users_path(current_user)", class: "user-name__btn user-name__btn--cog" do
           = icon('fas fa-cog', class: "user-name__btn--icon")
           %span<>
   .side-bar__group-list
