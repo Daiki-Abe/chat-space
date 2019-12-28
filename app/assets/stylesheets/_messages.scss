@@ -71,17 +71,18 @@ html,body {
 
       .group-list__box {
         height: 95px;
-        color: $mainWhiteColor;
         font-weight: bold;
 
         &__name {
           padding: 20px 20px 5px 20px;
           font-size: 15px;
+          color: $mainWhiteColor;
         }
 
         &__message {
           padding: 0px 20px 40px 20px;
           font-size: 11px;
+          color: $mainWhiteColor;
         }
       }
     }
