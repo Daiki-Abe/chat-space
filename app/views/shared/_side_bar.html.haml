@@ -4,21 +4,17 @@
       .user-name__item__name 
         = current_user.name
       .user-name__item__icons
-        = link_to new_groups_path, class: "user-name__btn user-name__btn--edit" do
+        = link_to new_group_path, class: "user-name__btn user-name__btn--edit" do
           = icon('fa fa-edit', class: "user-name__btn--icon")
           %span<>
         = link_to edit_users_path, class: "user-name__btn user-name__btn--cog" do
           = icon('fas fa-cog', class: "user-name__btn--icon")
           %span<>
   .side-bar__group-list
-    .group-list__box
-      .group-list__box__name
-        techcamp
-      .group-list__box__message
-        まだメッセージはありません
-
-    .group-list__box
-      .group-list__box__name
-        techcamp
-      .group-list__box__message
-        まだメッセージはありません
+    - current_user.groups.each do |group|
+      .group-list__box
+        = link_to '#' do
+          .group-list__box__name
+            = group.group_name
+          .group-list__box__message
+            まだメッセージがありません
