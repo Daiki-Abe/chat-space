@@ -6,7 +6,7 @@
       .group-overview__box__group-member
         Member:masa
     .group-overview__edit-box
-      = link_to "Edit", edit_groups_path, class: "group-overview__edit-box__btn"
+      = link_to "Edit", edit_group_path(@group), class: "group-overview__edit-box__btn"
 
   .main-chat__user-message
     .user-message__name
@@ -28,10 +28,10 @@
       おはよう！
 
   .form
-    %form(action="" method="post" class="form__area")
+    = form_for [@group, @message], html: {class: "form__area"} do |f|
       .send__message
-        %input(type="text" placeholder="type a message" class="send__message__text")
-        %label{class: "send__message__image", for: "image__box"}
+        = f.text_field :body, class: "send__message__text", placeholder: "type a message"
+        = f.label :image, class: "send__message__image" do
           = icon('fas', 'image')
-          %input(type="file" class="send__message__image_file" id="image__box")
-      %input(type="submit" value="Send" class="form__submit")
+          = f.file_field :image, class: "send__message__image_file"
+      = f.submit "Send", class: "form__submit"
