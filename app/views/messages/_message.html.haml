@@ -1,0 +1,9 @@
+.user-message__name
+  .user-message__name__talker
+    = message.user.name
+  .user-message__name__day-time
+    = message.created_at.strftime("%Y/%-m/%-d/(%a) %-H時%-M分%-S秒")
+.user-message__message
+  - if message.body.present?
+    = message.body
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

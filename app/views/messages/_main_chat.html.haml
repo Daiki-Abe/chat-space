@@ -2,30 +2,16 @@
   .main-chat__group-overview
     .group-overview__box
       .group-overview__box__group-name
-        test
+        = @group.group_name
       .group-overview__box__group-member
-        Member:masa
+        = "Member:"
+        - @group.users.each do |user|
+          = user.name
     .group-overview__edit-box
       = link_to "Edit", edit_group_path(@group), class: "group-overview__edit-box__btn"
 
   .main-chat__user-message
-    .user-message__name
-      .user-message__name__talker
-        masa
-      .user-message__name__day-time
-        - time = Time.now
-        = time.strftime("%Y/%-m/%-d/(%a) %-H時%-M分%-S秒")
-    .user-message__message
-      おはよう！
-
-    .user-message__name
-      .user-message__name__talker
-        masa
-      .user-message__name__day-time
-        - time = Time.now
-        = time.strftime("%Y/%-m/%-d/(%a) %-H時%-M分%-S秒")
-    .user-message__message
-      おはよう！
+    = render @messages
 
   .form
     = form_for [@group, @message], html: {class: "form__area"} do |f|
