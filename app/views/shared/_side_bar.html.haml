@@ -7,14 +7,14 @@
         = link_to new_group_path, class: "user-name__btn user-name__btn--edit" do
           = icon('fa fa-edit', class: "user-name__btn--icon")
           %span<>
-        = link_to edit_users_path, class: "user-name__btn user-name__btn--cog" do
+        = link_to edit_user_path(current_user), class: "user-name__btn user-name__btn--cog" do
           = icon('fas fa-cog', class: "user-name__btn--icon")
           %span<>
   .side-bar__group-list
     - current_user.groups.each do |group|
       .group-list__box
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .group-list__box__name
             = group.group_name
           .group-list__box__message
-            まだメッセージがありません
+            = group.show_last_message
