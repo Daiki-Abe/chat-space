@@ -66,15 +66,14 @@ $('#new_message').on('submit', function(e){
       data: {id: last_message_id}
     })
     .done(function(messages) {
+      console.log(messages);
       if (messages.length !== 0) {
         var insertHTML = '';
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
         });
-        $('.messages').append(insertHTML);
-        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-        $("#new_message")[0].reset();
-        $(".form__submit").prop("disabled", false);
+        $('.main-chat__user-message').append(insertHTML);
+        $('.main-chat__user-message').animate({ scrollTop: $('.main-chat__user-message')[0].scrollHeight});
       }
     })
     .fail(function() {
